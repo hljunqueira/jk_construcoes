@@ -58,7 +58,7 @@ nav ul {
   align-items: center;
   width: 100%;
   position: absolute;
-  top: 90%; /* Alterar para 20% ou um valor menor */
+  top: 90%; /* Alterado para 20% */
   left: 50%;
   transform: translate(-50%, -50%);
 }
