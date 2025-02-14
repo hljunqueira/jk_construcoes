@@ -54,20 +54,14 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  position: absolute;
-  top: 90%; /* Alterar para 20% ou um valor menor */
-  left: 53%;
-  transform: translate(-50%, -50%);
-}
-
-.logo-container {
   position: relative;
 }
 
 nav li {
-  margin-right: 80px;
+  margin-bottom: 20px;
 }
 
 nav a {
@@ -117,20 +111,19 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* Adicione essa linha para fazer com que o formulário preencha a tela */
-  font-size: 1.5rem; /* Adicione essa linha para aumentar a fonte */
-
+  width: 100%;
+  font-size: 1.5rem;
 }
 
 #form-orcamento div {
   margin-bottom: 2rem;
-  width: 100%; /* Adicione essa linha para fazer com que o campo de entrada de informações preencha a tela */
+  width: 100%;
 }
 
 #form-orcamento h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  text-align: center; /* Adicione essa linha para centralizar o título */
+  text-align: center;
 }
 
 #form-orcamento p {
@@ -142,7 +135,7 @@ section {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   text-align: right;
-  width: 100%; /* Adicione essa linha para fazer com que o campo de entrada de informações preencha a tela */
+  width: 100%;
 }
 
 #form-orcamento input, #form-orcamento textarea {
@@ -150,7 +143,7 @@ section {
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 100%; /* Adicione essa linha para fazer com que o campo de entrada de informações preencha a tela */
+  width: 100%;
 }
 
 #form-orcamento select {
@@ -159,11 +152,11 @@ section {
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
-  text-align: center; /* Adicione essa linha para centralizar o texto */
+  text-align: center;
 }
 
 #form-orcamento select option {
-  text-align: center; /* Adicione essa linha para centralizar o texto */
+  text-align: center;
   font-size: 1.4 rem;
 }
 
@@ -251,6 +244,12 @@ section {
   #form-orcamento button[type="submit"] {
     padding: 0.5rem 1rem;
   }
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -258,7 +257,6 @@ section {
     display: block;
     margin-bottom: 0.5rem;
   }
-
   #form-orcamento input, #form-orcamento textarea, #form-orcamento select {
     display: block;
     width: 100%;
@@ -267,9 +265,14 @@ section {
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-
   #form-orcamento button[type="submit"] {
     padding: 0.25rem 0.5rem;
+  }
+  .galeria-fotos {
+    height: 200px;
+  }
+  .galeria-video-item {
+    grid-column: 1 / 3;
   }
 }
 
@@ -418,7 +421,6 @@ section {
   .galeria {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .servicos {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -428,7 +430,6 @@ section {
   .galeria {
     grid-template-columns: 1fr;
   }
-
   .servicos {
     grid-template-columns: 1fr;
   }
