@@ -91,31 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const nome = document.getElementById("nome").value;
         const telefone = document.getElementById("telefone").value;
-        const email = document.getElementById("email").value;
         const endereco = document.getElementById("endereco").value;
-        const tipoConstrucao = document.getElementById("tipo-construcao").value;
-        const areaObra = document.getElementById("area-obra").value;
-        const tipoImovel = document.getElementById("tipo-imovel").value;
-        const descricaoObra = document.getElementById("descricao-obra").value;
-        const alvenaria = document.getElementById("alvenaria").checked;
-        const instalacoes = document.getElementById("instalacoes").checked;
-        const acabamentos = document.getElementById("acabamentos").checked;
-        const esquadrias = document.getElementById("esquadrias").checked;
-        const projetoArquitetonico = document.getElementById(
-          "projeto-arquitetonico"
-        ).value;
-        const prazoPrevisto = document.getElementById("prazo-previsto").value;
-        const orcamentoMaximo =
-          document.getElementById("orcamento-maximo").value;
-        const observacoes = document.getElementById("observacoes").value;
 
-        const mensagem = `Olá, eu sou ${nome} e estou interessado em obter um orçamento para uma obra. Meus dados de contato são: ${telefone}, ${email} e ${endereco}. A obra é um(a) ${tipoConstrucao} com área total de ${areaObra}m² e tipo de imóvel ${tipoImovel}. A descrição da obra é: ${descricaoObra}. Eu estou interessado nos seguintes serviços: ${
-          alvenaria ? "Alvenaria e Estruturas" : ""
-        } ${instalacoes ? "Instalações" : ""} ${
-          acabamentos ? "Acabamentos" : ""
-        } ${esquadrias ? "Esquadrias" : ""}. Eu ${
-          projetoArquitetonico === "sim" ? "tenho" : "não tenho"
-        } um projeto arquitetônico. O prazo previsto para início da obra é ${prazoPrevisto} e o orçamento máximo disponível é ${orcamentoMaximo}. Observações: ${observacoes}.`;
+        const mensagem = `Olá, eu sou ${nome} e estou interessado em obter um orçamento para uma obra. Meu telefone é ${telefone} e o endereço da obra é ${endereco}.`;
 
         const url = `https://api.whatsapp.com/send?phone=5548996155378&text=${encodeURIComponent(
           mensagem
@@ -143,10 +121,10 @@ document
     var formulario = document.getElementById("formulario");
     if (formulario.style.display === "none") {
       formulario.style.display = "block";
-      formulario.scrollTop = 0; /* Adicione essa linha */
+      formulario.scrollTop = 0;
     } else {
       formulario.style.display = "none";
-      window.location.href = "index.html"; /* Adicione essa linha */
+      window.location.href = "index.html";
     }
   });
 
@@ -155,5 +133,5 @@ document
   .addEventListener("click", function () {
     var formulario = document.getElementById("formulario");
     formulario.style.display = "none";
-    window.location.href = "index.html"; /* Adicione essa linha */
+    window.location.href = "index.html";
   });

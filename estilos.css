@@ -54,17 +54,18 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   width: 100%;
   position: absolute;
   top: 90%;
-  left: 50%;
+  left: 83%;
   transform: translate(-50%, -50%);
 }
 
 nav li {
   margin-bottom: 20px;
+  margin-right: 100px;
 }
 
 nav a {
@@ -142,6 +143,7 @@ section {
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
+  font-size: 1.5rem;
 }
 
 #form-orcamento select {
@@ -151,6 +153,7 @@ section {
   border-radius: 5px;
   width: 100%;
   text-align: left;
+  font-size: 1.5rem
 }
 
 #form-orcamento .servicos-desejados {
@@ -161,10 +164,19 @@ section {
 
 #form-orcamento .servicos-desejados label {
   margin-right: 20px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #form-orcamento .servicos-desejados input[type="checkbox"] {
-  margin-right: 10px;
+  display: none;
+}
+
+#form-orcamento .servicos-desejados input[type="checkbox"]:checked + label {
+  background-color: #4CAF50;
+  color: #fff;
 }
 
 /* Botão de envio de formulário */
@@ -179,11 +191,14 @@ section {
   transition: all 0.3s ease;
   width: 100%;
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
 }
 
 .btn-enviar:hover {
   background-color: #3e8e41;
   transform: translateY(-2px);
+  font-size: 1.5rem;
 }
 
 /* Botão para abrir o formulário */
@@ -197,6 +212,8 @@ section {
   font-size: 1.25rem;
   width: 100%;
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.25rem;
 }
 
 .btn-abrir-formulario:hover {
@@ -236,6 +253,8 @@ section {
   }
   #form-orcamento button[type="submit"] {
     padding: 0.5rem 1rem;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
   }
   nav ul {
     flex-direction: column;
@@ -451,4 +470,13 @@ section {
 #contato p {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
+}
+.erro {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+input:invalid + .erro {
+  display: block;
 }
