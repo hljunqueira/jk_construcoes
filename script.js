@@ -113,25 +113,27 @@ document.addEventListener("DOMContentLoaded", () => {
   new ModalController();
   smoothScroll();
   formValidation();
-});
 
-document
-  .getElementById("botao-abrir-formulario")
-  .addEventListener("click", function () {
-    var formulario = document.getElementById("formulario");
-    if (formulario.style.display === "none") {
-      formulario.style.display = "block";
-      formulario.scrollTop = 0;
-    } else {
+  // Abertura do formulário
+  document
+    .querySelector(".btn-abrir-formulario")
+    .addEventListener("click", function () {
+      var formulario = document.getElementById("formulario");
+      if (formulario.style.display === "none") {
+        formulario.style.display = "block";
+        formulario.scrollTop = 0;
+      } else {
+        formulario.style.display = "none";
+        window.location.href = "index.html";
+      }
+    });
+
+  // Botão fechar
+  document
+    .querySelector(".btn-fechar-formulario")
+    .addEventListener("click", function () {
+      var formulario = document.getElementById("formulario");
       formulario.style.display = "none";
-      window.location.href = "index.html";
-    }
-  });
-
-document
-  .getElementById("fechar-formulario")
-  .addEventListener("click", function () {
-    var formulario = document.getElementById("formulario");
-    formulario.style.display = "none";
-    window.location.href = "index.html";
-  });
+      window.location.href = "#botao-abrir-formulario";
+    });
+});
