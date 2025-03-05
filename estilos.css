@@ -279,6 +279,7 @@ table tr td:nth-child(even) {
   padding: 2rem;
   animation: fadeIn 0.5s;
   overflow-y: auto;
+  display: block;
 }
 
 #formulario form {
@@ -493,16 +494,17 @@ input:invalid + .erro {
 #voltar-para-o-topo {
   position: fixed;
   bottom: 80px; /* Ajuste a posição acima do botão do WhatsApp */
-  right: 20px;
+  right: 1200px;
   background-color: #000000;
   color: #fff;
-  padding: 5px 10px;
+  padding: 2px 2px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 12px;
   z-index: 1000;
   display: none; /* Inicialmente oculto */
+  margin: -5%;
 }
 #voltar-para-o-topo:hover {
   background-color: #3e8e41;
@@ -510,4 +512,41 @@ input:invalid + .erro {
 
 #voltar-para-o-topo i {
   font-size: 24px;
+}
+.banner-cta {
+  position: relative;
+  top: 100%;
+  left: 15%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.banner-cta h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.banner-cta p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#botao-agendamento {
+  background-color: #fff;
+  color: #050505;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#botao-agendamento:hover {
+  background-color: #000000;
 }

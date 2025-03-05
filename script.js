@@ -1,3 +1,16 @@
+function iniciarVideo() {
+  const videoAtual = document.querySelector(".galeria-video-item.ativo video");
+  if (videoAtual) {
+    videoAtual.play();
+  }
+  const videoAnterior = document.querySelector(
+    ".galeria-video-item:not(.ativo) video"
+  );
+  if (videoAnterior) {
+    videoAnterior.pause();
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // Configurações globais
   const config = {
@@ -111,22 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
       moverFotos(1);
     });
 
-  // Função para iniciar o vídeo
-  function iniciarVideo() {
-    const videoAtual = document.querySelector(
-      ".galeria-video-item.ativo video"
-    );
-    if (videoAtual) {
-      videoAtual.play();
-    }
-    const videoAnterior = document.querySelector(
-      ".galeria-video-item:not(.ativo) video"
-    );
-    if (videoAnterior) {
-      videoAnterior.pause();
-    }
-  }
-
   // Adiciona evento de clique para abrir o formulário
   document
     .getElementById("botao-abrir-formulario")
@@ -225,13 +222,29 @@ function atualizarVisibilidade() {
 
 setaEsquerda.addEventListener("click", () => {
   moverVideo(-1);
-  iniciarVideo();
 });
 
 setaDireita.addEventListener("click", () => {
   moverVideo(1);
-  iniciarVideo();
 });
 
 galeriaVideoItems[0].classList.add("ativo");
-iniciarVideo();
+
+// Adiciona evento de clique para abrir o formulário
+document
+  .getElementById("botao-agendamento")
+  .addEventListener("click", function () {
+    console.log("Evento de clique disparado");
+    // Verifica se o formulário está carregado
+    if (document.getElementById("formulario")) {
+      // Abre o formulário de agendamento
+      document.getElementById("formulario").style.display = "block";
+    } else {
+      // Se o formulário não está carregado, aguarda 500ms e tenta novamente
+      setTimeout(function () {
+        document.getElementById("botao-agendamento").click();
+      }, 500);
+    }
+  });
+
+console.log(document.getElementById("formulario"));
