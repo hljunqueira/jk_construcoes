@@ -66,21 +66,80 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Smooth Scroll
-  const smoothScroll = () => {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          target.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      });
+  new ModalController();
+
+  // Funções para mover fotos
+  let indiceFotos = 0;
+
+  function moverFotos(direcao) {
+    const fotos = document.querySelectorAll(".galeria-foto-item");
+    const totalFotos = fotos.length;
+    indiceFotos += direcao;
+
+    if (indiceFotos < 0) {
+      indiceFotos = 0; // Volta para o primeiro conjunto
+    } else if (indiceFotos >= totalFotos) {
+      indiceFotos = totalFotos - 3; // Volta para o último conjunto
+    }
+
+    atualizarVisibilidade();
+  }
+
+  function atualizarVisibilidade() {
+    const fotos = document.querySelectorAll(".galeria-foto-item");
+    fotos.forEach((foto, index) => {
+      if (index >= indiceFotos && index < indiceFotos + 3) {
+        foto.style.display = "block";
+      } else {
+        foto.style.display = "none";
+      }
     });
-  };
+  }
+
+  atualizarVisibilidade(); // Inicializa a visibilidade
+
+  // Adiciona eventos de clique às setas
+  document
+    .querySelector(".seta-esquerda-fotos")
+    .addEventListener("click", () => {
+      moverFotos(-1);
+    });
+
+  document
+    .querySelector(".seta-direita-fotos")
+    .addEventListener("click", () => {
+      moverFotos(1);
+    });
+
+  // Função para iniciar o vídeo
+  function iniciarVideo() {
+    const videoAtual = document.querySelector(
+      ".galeria-video-item.ativo video"
+    );
+    if (videoAtual) {
+      videoAtual.play();
+    }
+    const videoAnterior = document.querySelector(
+      ".galeria-video-item:not(.ativo) video"
+    );
+    if (videoAnterior) {
+      videoAnterior.pause();
+    }
+  }
+
+  // Adiciona evento de clique para abrir o formulário
+  document
+    .getElementById("botao-abrir-formulario")
+    .addEventListener("click", function () {
+      document.getElementById("formulario").style.display = "block";
+    });
+
+  // Adiciona evento de clique para fechar o formulário
+  document
+    .getElementById("fechar-formulario")
+    .addEventListener("click", function () {
+      document.getElementById("formulario").style.display = "none";
+    });
 
   // Form Validation
   const formValidation = () => {
@@ -92,8 +151,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const nome = document.getElementById("nome").value;
         const telefone = document.getElementById("telefone").value;
         const endereco = document.getElementById("endereco").value;
+        const servicos = document.getElementById("servicos").value;
+        const tipoConstrucao = document.getElementById("tipo-construcao").value;
+        const areaObra = document.getElementById("area-obra").value;
+        const descricaoObra = document.getElementById("descricao-obra").value;
 
-        const mensagem = `Olá, eu sou ${nome} e estou interessado em obter um orçamento para uma obra. Meu telefone é ${telefone} e o endereço da obra é ${endereco}.`;
+        const mensagem = `Olá, eu sou ${nome} e estou interessado em obter um orçamento para uma obra. Meu telefone é ${telefone} e o endereço da obra é ${endereco}. Os serviços desejados são: ${servicos}. O tipo de construção é ${tipoConstrucao} e a área da obra é de ${areaObra}m². A descrição da obra é: ${descricaoObra}.`;
 
         const url = `https://api.whatsapp.com/send?phone=5548996155378&text=${encodeURIComponent(
           mensagem
@@ -109,29 +172,66 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Inicialização dos módulos
-  new ModalController();
-  smoothScroll();
   formValidation();
-});
 
-document
-  .getElementById("botao-abrir-formulario")
-  .addEventListener("click", function () {
-    var formulario = document.getElementById("formulario");
-    if (formulario.style.display === "none") {
-      formulario.style.display = "block";
-      formulario.scrollTop = 0;
+  // Botão de Voltar ao Topo
+  const voltarParaTopo = document.createElement("button");
+  voltarParaTopo.id = "voltar-para-o-topo";
+  voltarParaTopo.title = "Voltar para o topo";
+  voltarParaTopo.textContent = "Voltar ao Topo";
+  voltarParaTopo.innerHTML +=
+    '<i class="fa fa-arrow-up" aria-hidden="true"></i>';
+  document.body.appendChild(voltarParaTopo);
+
+  // Exibir o botão de voltar ao topo ao rolar a página
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 200) {
+      voltarParaTopo.style.display = "block";
     } else {
-      formulario.style.display = "none";
-      window.location.href = "index.html";
+      voltarParaTopo.style.display = "none";
     }
   });
 
-document
-  .getElementById("fechar-formulario")
-  .addEventListener("click", function () {
-    var formulario = document.getElementById("formulario");
-    formulario.style.display = "none";
-    window.location.href = "index.html";
+  // Ação do botão de voltar ao topo
+  voltarParaTopo.addEventListener("click", function () {
+    window.scrollTo(0, 0);
   });
+});
+
+let indiceVideo = 0;
+const galeriaVideoItems = document.querySelectorAll(".galeria-video-item");
+const setaEsquerda = document.querySelector(".seta-esquerda-videos");
+const setaDireita = document.querySelector(".seta-direita-videos");
+
+function moverVideo(direcao) {
+  indiceVideo += direcao * 3;
+  if (indiceVideo < 0) {
+    indiceVideo = galeriaVideoItems.length - 3;
+  } else if (indiceVideo >= galeriaVideoItems.length) {
+    indiceVideo = 0;
+  }
+  atualizarVisibilidade();
+}
+
+function atualizarVisibilidade() {
+  galeriaVideoItems.forEach((item, index) => {
+    if (index >= indiceVideo && index < indiceVideo + 3) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
+
+setaEsquerda.addEventListener("click", () => {
+  moverVideo(-1);
+  iniciarVideo();
+});
+
+setaDireita.addEventListener("click", () => {
+  moverVideo(1);
+  iniciarVideo();
+});
+
+galeriaVideoItems[0].classList.add("ativo");
+iniciarVideo();

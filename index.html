@@ -1,144 +1,284 @@
+<!-- Início do documento HTML -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Metadados do documento -->
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="height=device-height, initial-scale=1.0">
   <title>JK Construções</title>
+  <!-- Link para o arquivo de estilos CSS -->
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+  <!-- Início do conteúdo da página -->
   <header>
-    <div class="logo-container">
-      <img src="img/logo_jk.png" alt="Logotipo da JK Construções" title="Logotipo da JK Construções" class="logo">
+    <!-- Topo da página -->
+    <div class="topo" style="background-color: #343434; padding: 1rem; text-align: center;">
+      <!-- Navegação -->
+      <nav>
+        <ul>
+          <li><a href="#sobre-nos">Nossa História</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#galeria">Galeria de Fotos e Vídeos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#sobre-nos">Nossa História</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#contato">Orçamento</a></li>
-      </ul>
-    </nav>
+    <!-- Logo da empresa -->
+    <div class="logo-container">
+      <img src="img/logo_jk.png" alt="Logotipo da JK Construções" title="Logotipo da JK Construções" class="logo" style="width: 300%; height: 300%;">
+    </div>
   </header>
+  <!-- Início do conteúdo principal da página -->
   <main>
-    <section id="sobre-nos">
-      <h2>Nossa História</h2>
-      <p>Construir sonhos e histórias, uma obra de cada vez.</p>
-      <p>Meu nome é Jackson Clames, sou casado há 15 anos e pai de um filho de 13 anos. Minha jornada no mundo da construção civil começou em 2016, impulsionada pelo desejo de atender às crescentes demandas da região de Balneário Arroio do Silva e arredores.</p>
-      <h3>Nossos Valores</h3>
-      <p><strong>Qualidade:</strong> Entregamos obras com os mais altos padrões de qualidade, utilizando materiais de primeira linha e técnicas construtivas inovadoras.</p>
-      <p><strong>Compromisso:</strong> Cumprimos prazos, orçamentos e expectativas dos clientes, com total transparência e responsabilidade.</p>
-      <p><strong>Atendimento Personalizado:</strong> Oferecemos um atendimento exclusivo, com soluções sob medida para cada cliente.</p>
-      <p><strong>Inovação:</strong> Buscamos constantemente por novas tecnologias e tendências do mercado para oferecer o melhor aos nossos clientes.</p>
-      <p><strong>Sustentabilidade:</strong> Priorizamos práticas construtivas sustentáveis, que respeitem o meio ambiente e contribuam para um futuro melhor.</p>
+    <!-- Seção sobre a empresa -->
+    <section id="sobre-nos" style="background-image: url('img/4.jpeg'); background-size: cover; background-position: center;">
+      <!-- Conteúdo da seção -->
+      <div style="background-color: rgba(0, 0, 0, 0.5); padding: 10px; text-align: center;">
+        <!-- Título da seção -->
+        <h2 style="color: #fff; font-size: 36px; font-weight: bold;">Nossa História</h2>
+        <!-- Texto da seção -->
+        <p style="color: #fff; font-size: 18px;text-align: center;">Construir sonhos e histórias, uma obra de cada vez.</p>
+        <!-- Outro texto da seção -->
+        <p style="color:#fff; font-size: 16px; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">Meu nome é Jackson Clames, sou casado há 15 anos e pai de um filho de 13 anos. Minha jornada no mundo da construção civil começou em 2016, impulsionada pelo desejo de atender às crescentes demandas da região de Balneário Arroio do Silva e arredores.</p>
+        <!-- Título da seção -->
+        <h3 style="color: #fff; font-size: 24px; font-weight: bold; background-color: rgba(0, 0, 0, 0.5); padding: 10px; text-align: center;">Nossos Valores</h3>
+        <!-- Lista de valores da empresa -->
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="color:#fff;margin-bottom: 10px; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <strong>Qualidade:</strong> Entregamos obras com os mais altos padrões de qualidade, utilizando materiais de primeira linha e técnicas construtivas inovadoras.
+          </li>
+          <li style="color:#fff;margin-bottom: 10px; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <strong>Compromisso:</strong> Cumprimos prazos, orçamentos e expectativas dos clientes, com total transparência e responsabilidade.
+          </li>
+          <li style="color:#fff;margin-bottom: 10px; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <strong>Atendimento Personalizado:</strong> Oferecemos um atendimento exclusivo, com soluções sob medida para cada cliente.
+          </li>
+          <li style="color:#fff;margin-bottom: 10px; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <strong>Inovação:</strong> Buscamos constantemente por novas tecnologias e tendências do mercado para oferecer o melhor aos nossos clientes.
+          </li>
+          <li style="color:#fff;margin-bottom: 10px; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <strong>Sustentabilidade:</strong> Priorizamos práticas construt ivas sustentáveis, que respeitem o meio ambiente e contribuam para um futuro melhor.
+          </li>
+        </ul>
+      </div>
     </section>
+    <!-- Seção de serviços -->
     <section id="servicos">
+      <!-- Título da seção -->
       <h2>Serviços</h2>
-      <div class="servicos">
-        <div class="servico">
-          <h3>Alvenaria e Estruturas</h3>
-          <p>→ Construção de alvenaria, fundações, vigas, colunas e demais elementos estruturais da construção.</p>
-        </div>
-        <div class="servico">
-          <h3>Instalações</h3>
-          <p>→ Execução de instalações elétricas, hidráulicas, sanitárias e de gás, incluindo fiação, tubulações, furos e acabamentos.</p>
-        </div>
-        <div class="servico">
-          <h3>Acabamentos</h3>
-          <p>→ Revestimentos de pisos e paredes, como cerâmica, porcelanato, pintura, gesso e outros materiais, garantindo a estética e funcionalidade dos ambientes.</p>
-        </div>
-        <div class="servico">
-          <h3>Esquadrias</h3>
-          <p>→ Instalação de portas, janelas, portões e demais esquadrias, incluindo madeira, alumínio, PVC e outros materiais.</p>
-        </div>
-      </div>
-      <h3>Galeria de Fotos</h3>
+      <!-- Texto da seção -->
+      <p>Oferecemos uma variedade de serviços de construção civil para atender às suas necessidades.</p>
+      <!-- Tabela de serviços -->
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <h3>Serviços</h3>
+            </th>
+            <th>
+              <h3>Descrição</h3>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <h3>Alvenaria e Estruturas</h3>
+            </td>
+            <td>
+              <p>Construção de alvenaria, fundações, vigas, colunas e demais elementos estruturais da construção.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Instalações</h3>
+            </td>
+            <td>
+              <p>Execução de instalações elétricas, hidráulicas, sanitárias e de gás, incluindo fiação, tubulações, furos e acabamentos.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Acabamentos</h3>
+            </td>
+            <td>
+              <p>Revestimentos de pisos e paredes, como cerâmica, porcelanato, pintura, gesso e outros materiais, garantindo a estética e funcionalidade dos ambientes.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Esquadrias</h3>
+            </td>
+            <td>
+              <p>Instalação de portas, janelas, portões e demais esquadrias, incluindo madeira, alumínio, PVC e outros materiais.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- Seção de galeria de fotos e vídeos -->
+    <section id="galeria">
+      <!-- Título da seção -->
+      <h3 style="text-align: center; color: #000000;">Galeria de Fotos e Vídeos</h3>
+      <!-- Galeria de fotos -->
       <div class="galeria-fotos">
-        <div class="galeria-foto-item">
-          <img src="img/1.jpeg" alt="Foto 1" title="Foto 1">
+        <!-- Botão de seta esquerda -->
+        <button class="seta-esquerda-fotos" onclick="moverFotos(-1)">&#8592;</button>
+        <!-- Container de fotos -->
+        <div class="galeria-fotos-container">
+          <!-- Fotos -->
+          <div class="galeria-foto-item">
+            <img src="img/1.jpeg" alt="Foto 1" title="Foto 1">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/2.jpeg" alt="Foto 2" title="Foto 2">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/3.jpeg" alt="Foto 3" title="Foto 3">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/4.jpeg" alt="Foto 4" title="Foto 4">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/5.jpeg" alt="Foto 5" title="Foto 5">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/6.jpeg" alt="Foto 6" title="Foto 6">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/7.jpeg" alt="Foto 7" title="Foto 7">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/8.jpeg" alt="Foto 8" title="Foto 8">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/9.jpeg" alt="Foto 9" title="Foto 9">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/10.jpeg" alt="Foto 10" title="Foto 10">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/11.jpeg" alt="Foto 11" title="Foto 11">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/12.jpeg" alt="Foto 12" title="Foto 12">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/13.jpeg" alt="Foto 13" title="Foto 13">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/14.jpeg" alt=" Foto 14" title="Foto 14">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/15.jpeg" alt="Foto 15" title="Foto 15">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/16.jpeg" alt="Foto 16" title="Foto 16">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/17.jpeg" alt="Foto 17" title="Foto 17">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/18.jpeg" alt="Foto 18" title="Foto 18">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/19.jpeg" alt="Foto 19" title="Foto 19">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/20.jpeg" alt="Foto 20" title="Foto 20">
+          </div>
+          <div class="galeria-foto-item">
+            <img src="img/21.jpeg" alt="Foto 21" title="Foto 21">
+          </div>
         </div>
-        <div class="galeria-foto-item">
-          <img src="img/2.jpeg" alt="Foto 2" title="Foto 2">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/3.jpeg" alt="Foto 3" title="Foto 3">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/4.jpeg" alt="Foto 4" title="Foto 4">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/5.jpeg" alt="Foto 5" title="Foto 5">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/6.jpeg" alt="Foto 6" title="Foto 6">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/7.jpeg" alt="Foto 7" title="Foto 7">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/8.jpeg" alt="Foto 8" title="Foto 8">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/9.jpeg" alt="Foto 9" title="Foto 9">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/10.jpeg" alt="Foto 10" title="Foto 10">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/11.jpeg" alt="Foto 11" title="Foto 11">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/12.jpeg" alt="Foto 12" title="Foto 12">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/13.jpeg" alt="Foto 13" title="Foto 13">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/14.jpeg" alt="Foto 14" title="Foto 14">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/15.jpeg" alt="Foto 15" title="Foto 15">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/16.jpeg" alt="Foto 16" title="Foto 16">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/17.jpeg" alt="Foto 17" title="Foto 17">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/18.jpeg" alt="Foto 18" title="Foto 18">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/19.jpeg" alt="Foto 19" title="Foto 19">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/20.jpeg" alt="Foto 20" title="Foto 20">
-        </div>
-        <div class="galeria-foto-item">
-          <img src="img/21.jpeg" alt="Foto 21" title="Foto 21">
-        </div>
+        <!-- Botão de seta direita -->
+        <button class="seta-direita-fotos" onclick="moverFotos(1)">&#8594;</button>
       </div>
-      <h3>Galeria de Vídeos</h3>
+      <!-- Galeria de vídeos -->
       <div class="galeria-videos">
-        <div class="galeria-video-item">
-          <video src="videos/v1.mp4" controls title="Vídeo 1"></video>
+        <!-- Botão de seta esquerda -->
+        <button class="seta-esquerda-videos" onclick="moverVideo(-1)">&#8592;</button>
+        <!-- Container de vídeos -->
+        <div class="galeria-videos-container">
+          <!-- Vídeos -->
+          <div class="galeria-video-item">
+            <video src="videos/v1.mp4" controls title="Vídeo 1"></video>
+          </div>
+          <div class="galeria-video-item">
+            <video src="videos/v8.mp4" controls title="Vídeo 2"></video>
+          </div>
+          <div class="galeria-video-item">
+            <video src="videos/v3.mp4" controls title="Vídeo 3"></video>
+          </div>
+          <div class="galeria-video-item">
+            <video src="videos/v4.mp4" controls title="Vídeo 4"></video>
+          </div>
+          <div class="galeria-video-item">
+            <video src="videos/v5.mp4" controls title="Vídeo 5"></video>
+          </div>
+          <div class="galeria-video-item">
+            <video src="videos/v6.mp4" controls title="Vídeo 6"></video>
+          </div>
+          <div class="galeria-video-item">
+            <video src="videos/v7.mp4" controls title="Vídeo 7"></video>
+          </div>
+          <div class="galeria-video-item">
+            <video src="videos/v2.mp4" controls title="Vídeo 8"></video>
+          </div>
         </div>
-        <div class="galeria-video-item">
-          <video src="videos/v3.mp4" controls title="Vídeo 3"></video>
+        <!-- Botão de seta direita -->
+        <button class="seta-direita-videos" onclick="moverVideo(1)">&#8594;</button>
+      </div>
+    </section>
+    <!-- Seção de depoimentos -->
+    <section id="depoimentos">
+      <!-- Título da seção -->
+      <h2>Depoimentos dos Clientes</h2>
+      <!-- Container de depoimentos -->
+      <div class="depoimentos-container">
+        <!-- Depoimento 1 -->
+        <div class="depoimento">
+          <p>"A JK Construções foi incrível! Eles construíram minha casa dos sonhos com eficiência e profissionalismo."</p>
+          <span>João Silva</span>
         </div>
-        <div class="galeria-video-item">
-          <video src="videos/v4.mp4" controls title="Vídeo 4"></video>
+        <div class="depoimento">
+          <p>"A JK Construções foi uma escolha incrível para a construção da minha casa. Eles foram muito profissionais e eficientes em todos os aspectos do projeto, desde o início até o fim. A equipe foi muito atenciosa e respeitou todos os prazos e orçamentos. Eu estou muito satisfeito com o resultado final e recomendo a JK Construções a qualquer pessoa que esteja procurando por uma construtora confiável e de alta qualidade."</p>
+          <span>Maria Oliveira</span>
+        </div>
+        <!-- Depoimento 3 -->
+        <div class="depoimento">
+          <p>"A JK Construções foi muito atenciosa e profissional durante todo o processo de construção. Eu recomendo muito!"</p>
+          <span>Carlos Santos</span>
         </div>
       </div>
     </section>
+    <!-- Seção de contato -->
     <section id="contato">
-      <h2>Orçamento</h2>
-      <button id="botao-abrir-formulario" class="btn-abrir-formulario">Clique e Preencha o Orçamento</button>
+      <!-- Título da seção -->
+      <h1 style="text-align: center;">Localização</h1>
+      <!-- Mapa de localização -->
+      <div style="text-align: center;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3488.8498625668253!2d-49.4496143!3d-29.0214344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a16e4a139f6cb1%3A0x90cd09ddd14c5641!2zSksgQ29uc3RydcOnw7Vlcw!5e0!3m2!1spt-BR!2sbr!4v1741140260930!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      <!-- Título da seção -->
+      <div style="margin-top: 60px;"></div>
+      <h2 style="text-align: center;">Agende seu orçamento</h2>
+      <!-- Botão de orçamento -->
+      <button id="botao-abrir-formulario" class="btn-abrir-formulario">CLIQUE AQUI!!!</button>
+      <!-- Formulário de orçamento -->
       <div id="formulario" style="display: none;">
+        <!-- Botão de fechar formulário -->
         <button id="fechar-formulario" class="btn-fechar-formulario">Fechar</button>
+        <!-- Formulário -->
         <form id="form-orcamento">
+          <!-- Título do formulário -->
           <h2>Formulário de Orçamento - JK Construções</h2>
+          <!-- Texto do formulário -->
           <p>Agradecemos o seu interesse nos serviços da JK Construções. Para que possamos elaborar um orçamento detalhado e personalizado para sua obra, por favor, preencha o formulário abaixo com o máximo de informações possível.</p>
+          <!-- Campo de nome -->
           <h3>Dados de Contato</h3>
           <div>
             <label for="nome">Nome completo:</label>
@@ -146,17 +286,20 @@
             <input type="text" id="nome" name="nome" required>
             <span class="erro">Campo obrigatório</span>
           </div>
+          <!-- Campo de telefone -->
           <div>
             <label for="telefone">Telefone:</label>
             <br>
             <input type="tel" id="telefone" name="telefone" required>
             <span class="erro">Campo obrigatório</span>
           </div>
+          <!-- Campo de endereço -->
           <div>
             <label for="endereco">Endereço da obra:</label>
             <br>
             <input type="text" id="endereco" name="endereco" required>
           </div>
+          <!-- Campo de serviços desejados -->
           <h3>Serviços Desejados</h3>
           <div class="servicos-desejados">
             <input type="checkbox" id="alvenaria" name="alvenaria">
@@ -168,6 +311,7 @@
             <input type="checkbox" id="esquadrias" name="esquadrias">
             <label for="esquadrias">Esquadrias</label>
           </div>
+          <!-- Campo de informações adicionais -->
           <h3>Informações Adicionais</h3>
           <div>
             <label for="tipo-construcao">Tipo de construção:</label>
@@ -189,26 +333,37 @@
             <br>
             <textarea id="descricao-obra" name="descricao-obra"></textarea>
           </div>
+          <!-- Botão de enviar formulário -->
           <button type="submit" class="btn-enviar">Enviar</button>
         </form>
+        <!-- Mensagem de envio -->
         <div id="mensagem-envio" style="display: none;">Mensagem enviada com sucesso!</div>
       </div>
-      <div style="margin-top: 50px;"></div>
-      <h2>Perguntas Frequentes</h2>
+      <!-- Perguntas frequentes -->
+      <div style="margin-top: 60px;"></div>
+      <h3 style="text-align: center;">Perguntas Frequentes</h3>
       <p><strong>Qual é o prazo de entrega para uma obra?</strong></p>
       <p>Nossa equipe trabalha para entregar as obras no prazo estabelecido, que varia de acordo com a complexidade do projeto.</p>
       <p><strong>Qual é o custo de uma obra?</strong></p>
       <p>O custo de uma obra varia de acordo com a complexidade do projeto e os materiais utilizados.</p>
     </section>
   </main>
+  <!-- Rodapé da página -->
   <footer>
-    <p style="text-align: center;">&copy; 2025 JK Construções. Todos os direitos reservados.</p>
+    <!-- Botão de WhatsApp -->
+    <a href="https://wa.me/5548996155378" class="whatsapp-botao" target="_blank">
+     <i class="fa fa-whatsapp" aria-hidden="true" style="background-image: url('whatsapp.png');"></i>
+    </a>
+    <!-- Texto de direitos autorais -->
+    <p style="text-align: center; color: #fff;">&copy; 2025 JK Construções. Todos os direitos reservados.</p>
   </footer>
+  <!-- Modal de imagem -->
   <div id="modal-imagem" class="modal">
     <span id="fechar-modal" class="fechar">&times;</span>
     <img class="modal-conteudo" id="img01">
     <div id="caption"></div>
   </div>
+  <!-- Script de JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
