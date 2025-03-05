@@ -173,6 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   formValidation();
+
   // Botão de Voltar ao Topo
   const voltarParaTopo = document.createElement("button");
   voltarParaTopo.id = "voltar-para-o-topo";
@@ -234,25 +235,3 @@ setaDireita.addEventListener("click", () => {
 
 galeriaVideoItems[0].classList.add("ativo");
 iniciarVideo();
-// Abertura do formulário
-document
-  .querySelector(".btn-abrir-formulario")
-  .addEventListener("click", function () {
-    var formulario = document.getElementById("formulario");
-    if (formulario.style.display === "none") {
-      formulario.style.display = "block";
-      formulario.scrollTop = 0;
-    } else {
-      formulario.style.display = "none";
-      window.location.href = "index.html";
-    }
-  });
-
-// Botão fechar
-document
-  .querySelector(".btn-fechar-formulario")
-  .addEventListener("click", function () {
-    var formulario = document.getElementById("formulario");
-    formulario.style.display = "none";
-    window.location.href = "#botao-abrir-formulario";
-  });
