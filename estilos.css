@@ -294,8 +294,6 @@ table tr td:nth-child(even) {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
-<<<<<<< HEAD
 /* Galeria de Fotos e Vídeos */
 .galeria-fotos {
   display: flex;
@@ -354,7 +352,7 @@ table tr td:nth-child(even) {
   font-size: 24px;
   cursor: pointer;
   margin: 10px;
-=======
+
 #formulario:target {
   display: block;
 }
@@ -374,7 +372,6 @@ table tr td:nth-child(even) {
 
 .btn-fechar-formulario:hover {
   background-color: #0c0c0c;
->>>>>>> 393b24ee78ff5ef3c7691c9b30bd749d2959f6c2
 }
 
 /* Responsividade */
@@ -534,7 +531,4 @@ input:invalid + .erro {
 #voltar-para-o-topo:hover {
   background-color: #3e8e41;
 }
-
-#voltar-para-o-topo i {
-  font-size: 24px;
 }
