@@ -1,0 +1,599 @@
+/* Estilos Globais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/* Topo da Página */
+.topo {
+  width: 100%;
+  height: 12vh;
+  background-color: #fdfdfd;
+  z-index: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.25rem 0;
+  display: block;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #000;
+  padding: 0rem;
+  border-bottom: 1px solid #333;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navegação */
+.topo nav {
+  display: flex;
+  justify-content: center;
+}
+
+.topo nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topo nav li {
+  margin-right: 20px;
+}
+
+.topo nav a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.topo nav a:hover {
+  color: #f1c40f;
+}
+
+/* Logo */
+.logo-container {
+  width: 50%; 
+  max-width: 100%; 
+  height: 100%; 
+  border-radius: 10px;
+  padding: -1rem;
+  margin-bottom: 185px;
+}
+
+.logo {
+  top: 100%;
+  left: 100%;
+  transform: translate(0%, 2%);
+}
+
+/* Seções com Ajuste de Scroll */
+section {
+  padding: 2rem 1rem;
+  margin: 1.5rem auto;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 1200px;
+  border-radius: 8px;
+}
+
+#servicos table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#servicos h2 {
+  text-align: center;
+}
+
+#servicos p {
+  text-align: center;
+}
+
+#servicos table th, #servicos table td {
+  text-align: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #f1f3f7;
+  border-right: 1px solid #f1f3f7;
+}
+
+#servicos table th h3 {
+  text-decoration: underline;
+  text-decoration-style: solid; 
+  text-decoration-thickness: 2px; 
+}
+
+#servicos table th {
+  background-color: #f1f3f7;
+}
+
+table tr td:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+table tr td:nth-child(even) {
+  background-color: #cccccc;
+}
+
+.galeria-fotos h3{
+  text-align: center;
+  color: #fff;
+}
+
+#form-orcamento {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+#form-orcamento h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#form-orcamento div {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+#form-orcamento label {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+#form-orcamento input, #form-orcamento textarea {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+#form-orcamento select {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  text-align: left;
+  font-size: 1.5rem
+}
+
+#form-orcamento .servicos-desejados {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+#form-orcamento .servicos-desejados label {
+  margin-right: 20px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#form-orcamento .servicos-desejados input[type="checkbox"] {
+  display: none;
+}
+
+#form-orcamento .servicos-desejados input[type="checkbox"]:checked + label {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+/* Botão de Envio de Formulário */
+.btn-enviar {
+  background-color: #4CAF50;
+  color: #fff;
+  padding : 0.875rem 1.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+}
+
+.btn-enviar:hover {
+  background-color: #3e8e41;
+  transform: translateY(-2px);
+  font-size: 1.5rem;
+}
+
+/* Botão para Abrir o Formulário */
+.btn-abrir-formulario {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  width: 100%;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.btn-abrir-formulario:hover {
+  background-color: #0c0c0c;
+}
+
+/* Formulário em Tela Cheia */
+#formulario {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2000;
+  padding: 2rem;
+  animation: fadeIn 0.5s;
+  overflow-y: auto;
+  display: block;
+}
+
+#formulario form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Galeria de Fotos e Vídeos */
+.galeria-fotos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galeria-fotos-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.galeria-foto-item {
+  margin: 2px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  display: none;
+}
+
+.galeria-foto-item.ativo {
+  display: block;
+}
+
+.galeria-videos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galeria-videos-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.galeria-video-item {
+  margin: 2px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  display: none;
+}
+
+.galeria-video-item.ativo {
+  display: block;
+}
+.galeria-video-item video {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.seta-esquerda, .seta-direita {
+  font-size: 24px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .topo nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .topo nav li {
+    margin-bottom: 20px;
+  }
+  .logo-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .banner-cta {
+    width: 100%;
+    padding: 10px;
+  }
+  .galeria-fotos-container, .galeria-videos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .galeria-foto-item, .galeria-video-item {
+    width: 100%;
+    height: auto;
+  }
+  .seta-esquerda, .seta-direita {
+    display: none;
+  }
+  #form-orcamento {
+    padding: 1rem;
+  }
+  #form-orcamento input, #form-orcamento textarea, #form-orcamento select {
+    padding: 0.5rem;
+  }
+  #form-orcamento button[type="submit"] {
+    padding: 0.5rem 1rem;
+  }
+  .depoimentos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .depoimento {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .topo nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .topo nav li {
+    margin-bottom: 10px;
+  }
+  .logo-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .banner-cta {
+    width: 100%;
+    padding: 5px;
+  }
+  .galeria-fotos-container, .galeria-videos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .galeria-foto-item, .galeria-video-item {
+    width: 100%;
+    height: auto;
+  }
+  .seta-esquerda, .seta-direita {
+    display: none;
+  }
+  #form-orcamento {
+    padding: 0.5rem;
+  }
+  #form-orcamento input, #form-orcamento textarea, #form-orcamento select {
+    padding: 0.25rem;
+  }
+  #form-orcamento button[type="submit"] {
+    padding: 0.25rem 0.5rem;
+  }
+  .depoimentos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .depoimento {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* Animação de fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Perguntas Frequentes */
+#contato {
+  margin-top: 5rem;
+}
+
+#contato h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#contato p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.erro {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+input:invalid + .erro {
+  display: block;
+}
+
+.whatsapp-botao {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color:transparent;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 25px;
+  text-decoration: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-botao:hover {
+  background-color: #2ecc71;
+}
+
+.fa-whatsapp {
+  background-size: 24px 24px;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  background-image: url('whatsapp.png');
+}
+
+/* Seção de Depoimentos */
+#depoimentos {
+  background-color: #f7f7f7;
+  padding: 50px;
+  text-align: center;
+}
+
+.depoimentos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.depoimento {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.depoimento p {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.depoimento span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Botão de Voltar ao Topo */
+#voltar-para-o-topo {
+  position: fixed;
+  bottom: 80px; /* Ajuste a posição acima do botão do WhatsApp */
+  right: 1200px;
+  background-color: #000000;
+  color: #fff;
+  padding: 2px 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  z-index: 1000;
+  display: none; /* Inicialmente oculto */
+  margin: -5%;
+}
+#voltar-para-o-topo:hover {
+  background-color: #3e8e41;
+}
+
+#voltar-para-o-topo i {
+  font-size: 24px;
+}
+.banner-cta {
+  position: relative;
+  top: 100%;
+  left: 15%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.banner-cta h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.banner-cta p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#botao-agendamento {
+  background-color: #fff;
+  color: #050505;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#botao-agendamento:hover {
+  background-color: #000000;
+}
