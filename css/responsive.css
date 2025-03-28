@@ -336,6 +336,15 @@
         background-repeat: no-repeat; /* Evita repetição da imagem */
         background-position: center; /* Centraliza a imagem */
     }
+    /* Ajuste para dispositivos móveis */
+    #home {
+        background-image: url('/images/logotipoJK.png'); /* Caminho para a logo */
+        background-size: contain; /* Ajusta a imagem para caber no contêiner */
+        background-repeat: no-repeat; /* Evita repetição da imagem */
+        background-position: center; /* Centraliza a imagem */
+        height: 100vh; /* Garante que a altura ocupe toda a tela */
+            min-height: 500px; /* Define uma altura mínima */
+        }
 }
 
 @media (max-width: 600px) {
