@@ -1077,6 +1077,13 @@ i.red {
         margin-left: 10%;
         max-width: 100%;
     }
+    #home.parallax {
+        background-size: contain; /* Ajusta a imagem para caber no contêiner */
+        background-repeat: no-repeat; /* Evita repetição da imagem */
+        background-position: center; /* Centraliza a imagem */
+        height: 100vh; /* Garante que a altura ocupe toda a tela */
+        min-height: 500px; /* Define uma altura mínima */
+    }
 }
 @media (min-width: 769px) and (max-width: 1000px) {
     .serv {
