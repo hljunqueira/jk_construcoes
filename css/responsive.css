@@ -330,6 +330,12 @@
     .first-section h2 {
         font-size: 32px;
     }
+    #home {
+        background-image: url('images/logotipoJK.png');
+        background-size: contain; /* Ajusta a imagem para caber no contêiner */
+        background-repeat: no-repeat; /* Evita repetição da imagem */
+        background-position: center; /* Centraliza a imagem */
+    }
 }
 
 @media (max-width: 600px) {
@@ -367,7 +373,6 @@
     .portfolio-filter ul li {
         border-radius: 0;
         padding: 1px;
-        display: inline-block;
         margin: 0 1px 2px 1px;
         text-decoration: none;
         text-transform: uppercase;
