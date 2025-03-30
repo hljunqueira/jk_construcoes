@@ -330,12 +330,6 @@
     .first-section h2 {
         font-size: 32px;
     }
-    #home {
-        background-image: url('images/logotipoJK.png');
-        background-size: contain; /* Ajusta a imagem para caber no contêiner */
-        background-repeat: no-repeat; /* Evita repetição da imagem */
-        background-position: center; /* Centraliza a imagem */
-    }
     /* Ajuste para dispositivos móveis */
     #home {
         background-image: url('/images/logotipoJK.png'); /* Caminho para a logo */

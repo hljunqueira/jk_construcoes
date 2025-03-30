@@ -18,7 +18,7 @@
 .socials.inline-inside a {
     font-size: 16px;
     margin: 0 1px;
-    color: #fff;
+    color: #000000;
     width: 31px;
     float: left;
     text-align: center;
@@ -167,7 +167,7 @@ h2 {
     margin-right: 10px;
 }
 .building_version .navbar-default .navbar-brand span {
-    color: #fff;
+    color: #000000;
     text-transform: uppercase;
     margin: 20px 0 0 0;
     float: left;
@@ -410,7 +410,7 @@ body.building_version .affix {
 }
 #bottom ul.bottom-nav > li > a {
     display: block;
-    color: #b7b7b7;
+    color: #000000;
     padding: 0 10px;
     position: relative;
 }
